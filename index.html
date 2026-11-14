@@ -36,7 +36,7 @@
   --line:#22314a;
   --accent:#c6f432;
   --name:#c6f432;
-  --lime:#c6f432;
+  --lime:#c6f432;--lav:#b4a7ff;--lav-soft:#221f3d;
   --accent-soft:#1f2c14;
   --band:#13213a;
   --band-ink:#eef2f7;
@@ -48,13 +48,13 @@
 @media (prefers-color-scheme: dark){
   :root:not([data-theme="light"]){
     --bg:#0a1322;--surface:#111d31;--ink:#eef2f7;--muted:#9aa6b8;--line:#22314a;
-    --accent:#c6f432;--name:#c6f432;--lime:#c6f432;--accent-soft:#1f2c14;--band:#13213a;--band-ink:#eef2f7;--band-muted:#93a0b4;
+    --accent:#c6f432;--name:#c6f432;--lime:#c6f432;--lav:#b4a7ff;--lav-soft:#221f3d;--accent-soft:#1f2c14;--band:#13213a;--band-ink:#eef2f7;--band-muted:#93a0b4;
     color-scheme:dark;
   }
 }
 :root[data-theme="dark"]{
   --bg:#0a1322;--surface:#111d31;--ink:#eef2f7;--muted:#9aa6b8;--line:#22314a;
-  --accent:#c6f432;--name:#c6f432;--lime:#c6f432;--accent-soft:#1f2c14;--band:#13213a;--band-ink:#eef2f7;--band-muted:#93a0b4;
+  --accent:#c6f432;--name:#c6f432;--lime:#c6f432;--lav:#b4a7ff;--lav-soft:#221f3d;--accent-soft:#1f2c14;--band:#13213a;--band-ink:#eef2f7;--band-muted:#93a0b4;
   color-scheme:dark;
 }
 *{box-sizing:border-box}
@@ -225,6 +225,32 @@ section.block .wrap{padding-block:80px 0}
 .copy:hover{border-color:var(--band-ink)}
 @media (max-width:600px){.contact-box{padding:36px 22px}}
 footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
+
+/* third accent: lavender */
+.stat b{color:var(--lime)}
+.stat:nth-child(n+3) b{color:var(--lav)}
+.stat .ind{color:var(--lav)}
+.stat:nth-child(n+3) .ic{background:color-mix(in srgb,var(--lav) 16%,transparent);color:var(--lav)}
+.res b{color:var(--lime)}
+.res:nth-child(even) b{color:var(--lav)}
+.res:nth-child(even) .ic-sm{background:var(--lav-soft);color:var(--lav)}
+.card .big div b{color:var(--lav)}
+.about-grid p strong{color:var(--lav)}
+.role-item ul li strong{color:var(--lav)}
+.role-item ul li::marker{color:var(--lav)}
+.approach li::before{background:var(--lav)}
+.proof figure:nth-child(1) figcaption b{color:var(--lav)}
+.proof figure:nth-child(2) figcaption b{color:var(--lime)}
+.chart-box .label{color:var(--lav)}
+.chart-box .bar{fill:color-mix(in srgb,var(--lav) 38%,transparent)}
+.chart-box .bar.hi{fill:var(--lime)}
+.chart-box .v{fill:var(--lav);paint-order:stroke;stroke:var(--band);stroke-width:4px;stroke-linejoin:round}
+.chart-box .v.hi{fill:var(--lime)}
+.chart-box .trend{fill:none;stroke:var(--lav);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.chart-box .dot{fill:var(--band);stroke:var(--lav);stroke-width:2.5}
+.chart-box .dot.hi{stroke:var(--lime);fill:var(--lime)}
+.chart-box .bar{transform-box:fill-box;transform-origin:50% 100%}
+.sec-head h2 em{font-style:normal;color:var(--lime)}
 </style>
 </head>
 <body>
@@ -276,7 +302,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
   <section class="block" id="about">
     <div class="wrap">
       <div class="about-grid">
-        <div class="about-side"><div class="sec-head"><span class="label">About</span><h2>Data first, then the creative.</h2></div><img class="about-photo" src="about.jpg" alt="Furqon Ashari smiling in a navy suit" loading="lazy"></div>
+        <div class="about-side"><div class="sec-head"><span class="label">About</span><h2>Data first, then the <em>creative.</em></h2></div><img class="about-photo" src="about.jpg" alt="Furqon Ashari smiling in a navy suit" loading="lazy"></div>
         <div class="about-copy">
           <p>I'm <strong>Furqon Ashari</strong>, a <strong>Performance Marketing Specialist</strong> based in Jakarta. Most of my days go into planning, running, and fine-tuning paid campaigns on <strong>Meta, Google, and Shopee Ads</strong> for brands in e-commerce, healthcare, and the marketing industry.</p>
           <p>I like to start with the numbers: where the money actually goes, who's really buying, and which ad makes people stop scrolling. Once that picture is clear, the right move usually is too. That's how a baby-care brand I handle doubled its Meta CPAS ROAS in four months, and how a healthcare client got more conversions while spending 40% less.</p>
@@ -288,7 +314,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
 
   <section class="block" id="work">
     <div class="wrap">
-      <div class="sec-head"><span class="label">Selected work</span><h2>Case studies</h2></div>
+      <div class="sec-head"><span class="label">Selected work</span><h2>Case <em>studies</em></h2></div>
 
       <article class="feature">
         <div>
@@ -357,7 +383,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
 
   <section class="block" id="experience">
     <div class="wrap">
-      <div class="sec-head"><span class="label">Experience</span><h2>Where I've worked</h2></div>
+      <div class="sec-head"><span class="label">Experience</span><h2>Where I've <em>worked</em></h2></div>
 
       <div class="company">
         <div class="co-name"><img class="co-logo" src="logo-gtmlab.png" alt="GTMLab logo" style="border-color:transparent"><h3>GTMLab</h3><p>Full-time · On-site · Jakarta</p></div>
@@ -441,7 +467,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
 
   <section class="block" id="other">
     <div class="wrap">
-      <div class="sec-head"><span class="label">Other work</span><h2>Content and creative</h2></div>
+      <div class="sec-head"><span class="label">Other work</span><h2>Content and <em>creative</em></h2></div>
       <div class="other">
         <article class="card">
           <span class="label">Social media · May 2024</span>
@@ -466,7 +492,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
 
   <section class="block" id="skills">
     <div class="wrap">
-      <div class="sec-head"><span class="label">Skills, tools, education</span><h2>What I work with</h2></div>
+      <div class="sec-head"><span class="label">Skills, tools, education</span><h2>What I <em>work with</em></h2></div>
       <div class="two">
         <div class="card">
           <h3>Skills</h3>
@@ -542,21 +568,57 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
   };
   var svg=document.getElementById("roasChart"), ns="http://www.w3.org/2000/svg";
   function el(t,a,txt){var e=document.createElementNS(ns,t);for(var k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;svg.appendChild(e);return e;}
+  var anim=null,reduce=window.matchMedia&&window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  function clamp(x){return x<0?0:x>1?1:x;}
+  function progress(){
+    if(reduce)return 1;
+    var r=svg.getBoundingClientRect(),vh=window.innerHeight||800;
+    var start=vh*0.88,end=Math.max(vh*0.5-r.height/2,vh*0.05);
+    return clamp((start-r.top)/(start-end));
+  }
+  function update(){
+    if(!anim)return;
+    var q=progress(),lead=0.2,f=q*(1+lead)-lead;
+    anim.line.style.strokeDashoffset=String(1-clamp(f));
+    anim.line.style.opacity=f>0?1:0;
+    anim.pts.forEach(function(o){
+      var s=clamp((f-o.cum+lead)/lead),shown=clamp((f-o.cum+0.02)/0.06);
+      o.bar.style.transform="scaleY("+s+")";
+      o.txt.style.opacity=shown;o.dot.style.opacity=shown;
+    });
+  }
   function draw(k){
     var c=sets[k],data=c.data;while(svg.firstChild)svg.removeChild(svg.firstChild);
-    var left=8,right=352,top=30,bottom=214,max=c.max,n=data.length,slot=(right-left)/n,bw=slot*0.5;
+    var left=8,right=352,top=34,bottom=214,max=c.max,n=data.length,slot=(right-left)/n,bw=slot*0.5;
     c.grid.forEach(function(g){var y=bottom-(g/max)*(bottom-top);el("line",{x1:left,x2:right,y1:y,y2:y,"class":"grid"});});
+    var pts=[];
     data.forEach(function(d,i){
       var h=(d[1]/max)*(bottom-top),x=left+i*slot+(slot-bw)/2,y=bottom-h,last=i===n-1;
-      el("rect",{x:x,y:y,width:bw,height:h,rx:4,"class":"bar"+(last?" hi":"")});
+      var bar=el("rect",{x:x,y:y,width:bw,height:h,rx:4,"class":"bar"+(last?" hi":"")});
       el("text",{x:x+bw/2,y:238,"text-anchor":"middle","class":"t"},d[0]);
-      if(c.show.indexOf(d[0])>-1){el("text",{x:x+bw/2,y:y-6,"text-anchor":"middle","class":"v"},d[1].toFixed(1)+"x");}
+      pts.push({cx:x+bw/2,cy:y,bar:bar,last:last,d:d});
     });
+    var dstr=pts.map(function(p,i){return(i?"L":"M")+p.cx.toFixed(1)+" "+p.cy.toFixed(1);}).join(" ");
+    var line=el("path",{d:dstr,pathLength:1,"class":"trend"});
+    line.style.strokeDasharray="1";line.style.strokeDashoffset="1";
+    var total=0,segs=[0];
+    for(var i=1;i<pts.length;i++){total+=Math.hypot(pts[i].cx-pts[i-1].cx,pts[i].cy-pts[i-1].cy);segs.push(total);}
+    pts.forEach(function(p,i){
+      p.cum=total?segs[i]/total:0;
+      p.dot=el("circle",{cx:p.cx,cy:p.cy,r:p.last?5.5:4.5,"class":"dot"+(p.last?" hi":"")});
+      p.txt=c.show.indexOf(p.d[0])>-1?el("text",{x:p.cx,y:p.cy-14,"text-anchor":"middle","class":"v"+(p.last?" hi":"")},p.d[1].toFixed(1)+"x"):el("text",{x:0,y:0,opacity:0},"");
+    });
+    anim={line:line,pts:pts};
     svg.setAttribute("aria-label",c.title+": "+data.map(function(d){return d[0]+" "+d[1]+"x";}).join(", "));
     document.getElementById("chartTitle").textContent=c.title;
     document.getElementById("chartNote").textContent=c.note;
     document.querySelectorAll(".seg button").forEach(function(b){b.setAttribute("aria-selected",b.getAttribute("data-k")===k?"true":"false");});
+    update();
   }
+  var tick=false;
+  function onScroll(){if(tick)return;tick=true;requestAnimationFrame(function(){tick=false;update();});}
+  window.addEventListener("scroll",onScroll,{passive:true});
+  window.addEventListener("resize",onScroll);
   document.querySelectorAll(".seg button").forEach(function(b){b.addEventListener("click",function(){draw(b.getAttribute("data-k"));});});
   draw("cpas");
   var btn=document.getElementById("copyBtn");
