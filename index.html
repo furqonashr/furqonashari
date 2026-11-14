@@ -582,7 +582,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
     anim.line.style.strokeDashoffset=String(1-clamp(f));
     anim.line.style.opacity=f>0?1:0;
     anim.pts.forEach(function(o){
-      var s=clamp((f-o.cum+lead)/lead),shown=clamp((f-o.cum+0.02)/0.06);
+      var s=clamp((f-o.cum+lead)/lead),shown=clamp((f-o.cum+0.06)/0.06);
       o.bar.style.transform="scaleY("+s+")";
       o.txt.style.opacity=shown;o.dot.style.opacity=shown;
     });
