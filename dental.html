@@ -282,6 +282,33 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
 @media (prefers-reduced-motion:reduce){.yrs{animation:none}.card:hover,.pill:hover{transform:none}}
 </style>
 <style>
+.tlx{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:22px 22px 24px;margin-top:8px}
+.tlx-head{display:flex;align-items:center;gap:20px;flex-wrap:wrap;margin-bottom:26px}
+.tlx-head small{display:block;font-family:var(--font-mono);font-size:11.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted);margin-bottom:2px}
+.tlx-head strong{font-size:20px;color:#ff8f7d;transition:color .4s}
+.tlx.live .tlx-head strong{color:var(--lime)}
+.tlx-wk{display:flex;align-items:baseline;gap:8px;margin-left:auto}
+.tlx-wk b{font-size:34px;font-weight:800;color:var(--ink);font-variant-numeric:tabular-nums}
+.tlx-wk span{font-size:13px;color:var(--muted)}
+.tlx-btn{font:inherit;font-size:13px;font-weight:700;color:var(--ink);background:transparent;border:1px solid var(--line);border-radius:999px;padding:8px 16px;cursor:pointer;transition:border-color .2s,transform .2s}
+.tlx-btn:hover{border-color:var(--lav);transform:translateY(-1px)}
+.tlx-steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+@media(max-width:800px){.tlx-steps{grid-template-columns:1fr 1fr;row-gap:26px}.tlx-wk{margin-left:0}}
+.tlx-steps li{position:relative;padding:22px 14px 8px 0;cursor:default;outline:none;--p:0;--c:#ff8f7d}
+.tlx-steps li.on{--c:var(--lime)}
+.tlx-steps li::before{content:"";position:absolute;left:0;right:0;top:7px;height:3px;border-radius:3px;background:var(--line)}
+.tlx-steps li::after{content:"";position:absolute;left:0;top:7px;height:3px;border-radius:3px;width:calc(var(--p)*100%);background:var(--c)}
+.tlx-steps li em{position:absolute;left:0;top:0;width:17px;height:17px;border-radius:50%;background:var(--bg);border:3px solid var(--line);z-index:2;transition:border-color .3s,background .3s,transform .3s}
+.tlx-steps li.lit em{border-color:var(--c);background:var(--c);transform:scale(1.1)}
+.tlx-steps li.on.lit em{box-shadow:0 0 0 6px rgb(198 244 50 / .18)}
+.tlx-steps li b{display:block;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);margin-bottom:4px;transition:color .3s}
+.tlx-steps li.lit b{color:var(--c)}
+.tlx-steps li span{font-size:14.5px;color:var(--muted);transition:color .3s}
+.tlx-steps li.lit span{color:var(--ink)}
+.tlx-steps li:hover,.tlx-steps li:focus-visible{transform:translateY(-3px)}
+.tlx-steps li{transition:transform .25s}
+.tlx-steps li:hover span,.tlx-steps li:focus-visible span{color:var(--ink)}
+
 .chero .wrap{padding-block:56px 40px;display:flex;flex-direction:column;gap:18px;max-width:1120px}
 .chero h1{font-size:clamp(36px,5.6vw,68px);font-weight:800;letter-spacing:-.035em;max-width:16em}
 .chero h1 em{font-style:normal;color:var(--lime)}
@@ -350,7 +377,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
 <div class="wrap">
 <section class="sec"><h2>The <em>challenge</em></h2><div class="prose">
 <p>A multi-branch dental clinic group running Google Ads for new-patient inquiries by form and WhatsApp. In January the clinic's website was hacked and the Google Ads account was suspended. <strong>Ads stayed off from January to April</strong>, and the client asked to hold them until the website was rebuilt.</p></div>
-<div class="tl"><div><b>Jan</b><span>Website hacked, account suspended, ads stop</span></div><div><b>Feb &ndash; Mar</b><span>Client holds ads until the new website is ready</span></div><div><b>Appeal</b><span>I file the appeal with Google Ads support once the site is ready</span></div><div><b>Apr</b><span>Account back, campaigns relaunched</span></div></div></section>
+<div class="tlx" id="tlx"><div class="tlx-head"><div><small>Google Ads status</small><strong id="tlState">Ads offline</strong></div><div class="tlx-wk"><b id="tlWk">0</b><span>weeks offline</span></div><button type="button" id="tlReplay" class="tlx-btn">Replay &#8635;</button></div><ol class="tlx-steps"><li tabindex="0" class="off"><em></em><b>Jan</b><span>Website hacked, account suspended, ads stop</span></li><li tabindex="0" class="off"><em></em><b>Feb &ndash; Mar</b><span>Client holds ads until the new website is ready</span></li><li tabindex="0" class="off"><em></em><b>Appeal</b><span>I file the appeal with Google Ads support once the site is ready</span></li><li tabindex="0" class="on"><em></em><b>Apr</b><span>Account back, campaigns relaunched</span></li></ol></div></section>
 
 <section class="sec"><h2>The <em>comeback</em></h2>
 <div class="charts">
@@ -383,6 +410,12 @@ function show(el){var t=el.getAttribute("data-tip");if(!t)return;tip.textContent
 function hide(){tip.classList.remove("on")}
 [].forEach.call(document.querySelectorAll("rect.bar"),function(el){el.addEventListener("mouseenter",function(){show(el)});el.addEventListener("mouseleave",hide);el.addEventListener("focus",function(){show(el)});el.addEventListener("blur",hide);el.addEventListener("click",function(){show(el)})});
 addEventListener("scroll",hide,{passive:true});
+(function(){var x=document.getElementById("tlx");if(!x)return;var lis=[].slice.call(x.querySelectorAll("li")),st=document.getElementById("tlState"),wk=document.getElementById("tlWk"),rp=document.getElementById("tlReplay"),ov=null;function cl(v){return v<0?0:v>1?1:v}
+function draw(q){var f=q*4;lis.forEach(function(li,i){var p=cl(f-i+0.15);li.style.setProperty("--p",cl(f-i));li.classList.toggle("lit",p>0&&(i===0?f>0:f>i-0.15))});var off=cl(f/3),live=f>=3.6;x.classList.toggle("live",live);st.textContent=live?"Back live":"Ads offline";wk.textContent=live?"11":Math.round(11*off)}
+function sc(){if(ov!==null)return;if(r){draw(1);return}var b=x.getBoundingClientRect(),vh=innerHeight||800,s0=vh*.85,e0=Math.max(vh*.45-b.height/2,vh*.05);draw(cl((s0-b.top)/(s0-e0)))}
+var tk=false;addEventListener("scroll",function(){if(tk)return;tk=true;requestAnimationFrame(function(){tk=false;sc()})},{passive:true});addEventListener("resize",sc);sc();
+if(rp)rp.addEventListener("click",function(){if(r){draw(1);return}var t0=null;ov=0;draw(0);(function f(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/3800);ov=k;draw(k);if(k<1)requestAnimationFrame(f);else{ov=null}})(performance.now())})})();
+
 (function(){var ns="http://www.w3.org/2000/svg";function cl(x){return x<0?0:x>1?1:x}
 var cs=[].slice.call(document.querySelectorAll(".chart")).map(function(c){var svg=c.querySelector("svg"),bars=[].slice.call(c.querySelectorAll("rect.bar"));if(!bars.length)return null;
 var vs=[].slice.call(c.querySelectorAll("text.v")),pts=bars.map(function(b){return{x:+b.getAttribute("x")+ +b.getAttribute("width")/2,y:+b.getAttribute("y")}});
