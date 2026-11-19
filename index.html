@@ -302,7 +302,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
 .ba-hint b{color:var(--lime)}
 @media (prefers-reduced-motion:reduce){.yrs{animation:none}.card:hover,.pill:hover{transform:none}}
 </style>
-</head>
+<style>.cards{grid-template-columns:repeat(2,1fr)}@media(max-width:900px){.cards{grid-template-columns:1fr}}.more{color:var(--lime);font-weight:600;text-decoration:none;font-size:14.5px;margin-top:2px}.more:hover{text-decoration:underline}</style><style>.more{display:inline-flex;align-items:center;gap:10px;align-self:flex-start;background:var(--lime);color:#0a1322;font-weight:800;font-size:14px;text-decoration:none;padding:9px 10px 9px 18px;border-radius:999px;box-shadow:0 6px 18px -6px rgb(198 244 50 / .55);transition:transform .2s,box-shadow .2s}.more i{font-style:normal;display:inline-grid;place-items:center;width:26px;height:26px;border-radius:50%;background:#0a1322;color:var(--lime);transition:transform .2s}.more:hover{transform:translateY(-2px);box-shadow:0 10px 24px -6px rgb(198 244 50 / .7)}.more:hover i{transform:translateX(3px)}</style><style>.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 4px}.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:12px 22px;border-radius:999px;text-decoration:none;transition:transform .2s,background .2s}.btn:hover{transform:translateY(-2px)}.btn.pri{background:var(--lime);color:#0a1322}.btn.sec{border:1px solid var(--ink);color:var(--ink)}</style><style>.avail{display:inline-flex;align-items:center;gap:8px;font-size:13px;font-weight:600;color:var(--ink);background:var(--surface);border:1px solid var(--line);border-radius:999px;padding:6px 14px;width:fit-content}.avail i{width:8px;height:8px;border-radius:50%;background:var(--lime);animation:ping 2s infinite}@keyframes ping{0%{box-shadow:0 0 0 0 rgb(198 244 50 / .6)}70%{box-shadow:0 0 0 9px rgb(198 244 50 / 0)}100%{box-shadow:0 0 0 0 rgb(198 244 50 / 0)}}@media(prefers-reduced-motion:reduce){.avail i{animation:none}}</style></head>
 <body>
 <div id="prog" aria-hidden="true"></div>
 <header class="top">
@@ -322,6 +322,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
   <section class="hero">
     <div class="wrap">
       <div class="hero-text">
+        <span class="avail"><i></i>Open to new roles &middot; Jakarta &amp; remote</span>
         <span class="hello">Hello!</span>
         <h1>I'm Furqon <em>Ashari</em></h1>
         <p class="role">Performance Marketing Specialist</p>
@@ -332,6 +333,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
           <span class="pill"><img src="ic-shopee.png" alt="">Shopee Ads</span>
           <span class="pill"><img src="ic-gbp.png" alt="">Google Business Profile</span>
         </div>
+        <div class="hero-cta"><a class="btn pri" href="https://s.id/PortfolioFurqonAshari" target="_blank" rel="noopener">Download CV</a><a class="btn sec" href="#work">See my work</a></div>
       </div>
       <div class="hero-photo">
         <img src="furqon.jpg" alt="Portrait of Furqon Ashari in a dark suit">
@@ -344,8 +346,8 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
     <div class="wrap">
       <div class="stat"><i class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg></i><span class="ind">E-commerce · Baby care</span><b>12.9x</b><span>Meta CPAS ROAS, up from 6.4x in July</span></div>
       <div class="stat"><i class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2L5 8z"/><path d="M9 8V7a3 3 0 0 1 6 0v1"/></svg></i><span class="ind">E-commerce · Baby care</span><b>23.4x</b><span>Shopee Ads ROAS, up from 14.7x in July</span></div>
-      <div class="stat"><i class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"/><path d="M9 15l-3-3c1-4 4.5-8 12-9-1 7.5-5 11-9 12z"/><circle cx="14.5" cy="9.5" r="1.6"/></svg></i><span class="ind">Marketing industry</span><b>16</b><span>qualified leads from campaigns built from scratch</span></div>
-      <div class="stat"><i class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v9"/><path d="M8.5 12.5 12 16l3.5-3.5"/></svg></i><span class="ind">Healthcare</span><b>&minus;40%</b><span>ad spend, with conversions still up 6%</span></div>
+      <div class="stat"><i class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"/><path d="M9 15l-3-3c1-4 4.5-8 12-9-1 7.5-5 11-9 12z"/><circle cx="14.5" cy="9.5" r="1.6"/></svg></i><span class="ind">Marketing industry</span><b>5</b><span>deals won from 87 leads in five weeks</span></div>
+      <div class="stat"><i class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v9"/><path d="M8.5 12.5 12 16l3.5-3.5"/></svg></i><span class="ind">Healthcare</span><b>&minus;87%</b><span>cost per conversion on Google Ads, Jul to Oct</span></div>
       <div class="stat"><i class="ic" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></i><span class="ind">Local SEO</span><b>100+</b><span>Google Business Profiles optimized</span></div>
     </div>
   </section>
@@ -372,6 +374,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
           <div class="tagrow"><span class="label">E-commerce</span><span class="label">Baby care</span><span class="label">Meta CPAS + Shopee Ads</span></div>
           <h3>Scaling marketplace ads for a baby-care brand on Shopee</h3>
           <p class="desc">More sales from the same budget for a baby-care brand on Shopee, through Meta Collaborative Ads (CPAS) and Shopee Ads.</p>
+          <a class="more" href="fitpac.html" style="display:inline-block;margin-top:4px">Read the full case <i>&rarr;</i></a>
           <div class="results">
             <div class="res"><i class="ic-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="3 17 9 11 13 15 21 7"/><polyline points="15 7 21 7 21 13"/></svg></i><b>2x</b><span>Meta CPAS ROAS, 6.4x to 12.9x (Jul to Oct 2026)</span></div>
             <div class="res"><i class="ic-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 8h14l-1.2 12H6.2L5 8z"/><path d="M9 8V7a3 3 0 0 1 6 0v1"/></svg></i><b>+60%</b><span>Shopee Ads ROAS, 14.7x to 23.4x (Jul to Oct 2026)</span></div>
@@ -392,36 +395,13 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
           </div>
           <p class="chart-note" id="chartNote"></p>
         </div>
-        <div class="proof">
-          <span class="label">Proof · Meta Ads Manager, CPAS campaigns</span>
-          <div class="proof-grid">
-            <figure><a href="ss-cpas-jul.jpg" target="_blank" rel="noopener"><img src="ss-cpas-jul.jpg" alt="Meta Ads Manager CPAS campaigns for July 2026 showing average purchase ROAS 6.39" loading="lazy"></a><figcaption><b>Before</b> · July 2026 · ROAS 6,39</figcaption></figure>
-            <figure><a href="ss-cpas-oct.jpg" target="_blank" rel="noopener"><img src="ss-cpas-oct.jpg" alt="Meta Ads Manager CPAS campaigns for October 2026 showing average purchase ROAS 12.87" loading="lazy"></a><figcaption><b>After</b> · October 2026 · ROAS 12,87</figcaption></figure>
-          </div>
-          <span class="label" style="margin-top:10px">Proof · Shopee Seller Centre, Iklan Produk</span>
-          <div class="proof-grid">
-            <figure><img src="ss-shopee-jul.jpg" alt="Shopee Ads dashboard for July 2026 showing ROAS 14.68" loading="lazy"><figcaption><b>Before</b> · July 2026 · ROAS 14,68</figcaption></figure>
-            <figure><img src="ss-shopee-oct.jpg" alt="Shopee Ads dashboard for October 2026 showing ROAS 23.42" loading="lazy"><figcaption><b>After</b> · October 2026 · ROAS 23,42</figcaption></figure>
-          </div>
-        </div>
-      </article>
+        </article>
 
       <div class="cards">
-        <article class="card">
-          <i class="ic-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v9"/><path d="M8.5 12.5 12 16l3.5-3.5"/></svg></i>
-          <div class="tagrow" style="margin:0"><span class="label">Healthcare</span><span class="label">Meta + Google Ads</span></div>
-          <h3>Doing more with less spend</h3>
-          <p>Led paid acquisition for a healthcare client. Reallocated budget across Meta and Google and tightened audiences and campaign structure.</p>
-          <div class="big"><div><b>&minus;40%</b><span>ad spend</span></div><div><b>+6%</b><span>conversions</span></div></div>
-        </article>
-        <article class="card">
-          <i class="ic-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"/><path d="M9 15l-3-3c1-4 4.5-8 12-9-1 7.5-5 11-9 12z"/><circle cx="14.5" cy="9.5" r="1.6"/></svg></i>
-          <div class="tagrow" style="margin:0"><span class="label">Marketing industry</span><span class="label">Meta + Google Ads</span></div>
-          <h3>Built from scratch, then taken abroad</h3>
-          <p>Set up Meta and Google Ads campaigns from zero for a marketing-industry client, then scaled them to international markets.</p>
-          <div class="big"><div><b>16</b><span>qualified leads</span></div><div><b>Intl.</b><span>markets launched</span></div></div>
-        </article>
-        <article class="card">
+<article class="card"><i class="ic-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v9"/><path d="M8.5 12.5 12 16l3.5-3.5"/></svg></i><div class="tagrow" style="margin:0"><span class="label">Healthcare</span><span class="label">Google Ads</span></div><h3>Half the budget, double the conversions</h3><p>Google Ads for a healthcare provider: cut the campaigns that produced nothing and moved budget to the ones that produced qualified leads.</p><a class="more" href="healthcare.html">Read the case <i>&rarr;</i></a><div class="big"><div><b>&minus;87%</b><span>cost per conversion</span></div><div><b>+25%</b><span>paid MQLs</span></div></div></article>
+<article class="card"><i class="ic-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 15c-1.5 1.5-2 5-2 5s3.5-.5 5-2"/><path d="M9 15l-3-3c1-4 4.5-8 12-9-1 7.5-5 11-9 12z"/><circle cx="14.5" cy="9.5" r="1.6"/></svg></i><div class="tagrow" style="margin:0"><span class="label">Marketing industry</span><span class="label">Lead funnel</span></div><h3>From first inquiry to closed deal</h3><p>A lead funnel tracked end to end for a marketing-services business, from raw inquiry to booked meeting and won deal.</p><a class="more" href="marketing-industry.html">Read the case <i>&rarr;</i></a><div class="big"><div><b>87</b><span>raw leads</span></div><div><b>5</b><span>deals won</span></div></div></article>
+<article class="card"><i class="ic-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="9"/><path d="M12 7v9"/><path d="M8.5 12.5 12 16l3.5-3.5"/></svg></i><div class="tagrow" style="margin:0"><span class="label">Dental clinics</span><span class="label">Google Ads</span></div><h3>Back from 11 weeks offline</h3><p>After a website hack suspended the Google Ads account, I handled the appeal and rebuilt performance past the old level.</p><a class="more" href="dental.html">Read the case <i>&rarr;</i></a><div class="big"><div><b>2.4x</b><span>conversions, Jun to Oct</span></div><div><b>&minus;42%</b><span>cost per conversion</span></div></div></article>
+<article class="card">
           <i class="ic-sm" aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11z"/><circle cx="12" cy="10" r="2.5"/></svg></i>
           <div class="tagrow" style="margin:0"><span class="label">Local SEO</span><span class="label">Google Business Profile</span></div>
           <h3>100+ business profiles optimized</h3>
@@ -443,9 +423,9 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
             <h4>Performance Marketing Specialist <span class="now">Current</span></h4>
             <div class="role-meta">Nov 2025 to Present · Menteng, Jakarta</div>
             <ul>
-              <li>Led paid acquisition for a <strong>healthcare</strong> client across Meta and Google Ads, reducing ad spend by <strong>40%</strong> while increasing conversions by <strong>6%</strong> through budget reallocation and audience and campaign optimization.</li>
-              <li>Scaled Meta CPAS and Shopee Ads for an <strong>e-commerce baby-care</strong> brand, growing CPAS ROAS from <strong>6.4x to 12.9x</strong> in four months and Shopee Ads ROAS to <strong>23.4x</strong>, and driving <strong>Rp232M+</strong> in ads-attributed GMV in a single month.</li>
-              <li>Built Meta and Google Ads campaigns from scratch for a <strong>marketing industry</strong> client, generating <strong>16 qualified leads</strong> and scaling the campaigns to international markets.</li>
+              <li>Ran Google Ads for a <strong>healthcare</strong> client, cutting cost per conversion by <strong>87%</strong> (Jul to Oct) and growing paid qualified leads by <strong>25%</strong> on less spend, by shifting budget to the campaigns that produced qualified leads.</li>
+              <li>Rebuilt Google Ads for a <strong>dental clinic group</strong> after a website hack suspended the account: handled the appeal and relaunch, then grew conversions <strong>2.4x</strong> (Jun to Oct) while cost per conversion fell <strong>42%</strong> from the low point.</li>
+              <li>Tracked the lead funnel of a <strong>marketing-industry</strong> business end to end: <strong>87 raw leads, 28 booked meetings and 5 deals won</strong> in five weeks.</li>
               <li>Handled performance campaigns across multiple other industries, applying a data-driven approach to optimize efficiency, scale revenue, and hit client KPIs.</li>
             </ul>
           </div>
@@ -554,6 +534,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
             <span class="chip">Lead Generation</span>
             <span class="chip">Budget Planning &amp; Pacing</span>
             <span class="chip">Analytics &amp; Insights</span>
+            <span class="chip">Google Business Profile Optimization</span>
             <span class="chip">Content Strategy</span>
             <span class="chip">Keyword Research</span>
             <span class="chip">Copywriting &amp; SEO</span>
@@ -564,6 +545,7 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
             <dt>Reporting</dt><dd>Google Sheets, Docs, Slides</dd>
             <dt>Analytics</dt><dd>Google Analytics</dd>
             <dt>Design</dt><dd>Canva, CapCut</dd>
+            <dt>Local SEO</dt><dd>Local Falcon</dd>
             <dt>Content</dt><dd>WordPress</dd>
           </dl>
         </div>
@@ -594,9 +576,10 @@ footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
             <span class="val" id="email">furqonkumambouw@gmail.com</span>
           </div>
           <button class="copy" id="copyBtn" type="button">Copy email</button>
+          <a class="btn pri" href="https://s.id/PortfolioFurqonAshari" target="_blank" rel="noopener">Download CV</a>
           <div class="contact-item">
             <span class="label">WhatsApp</span>
-            <a class="val" href="https://wa.me/6282299313109" target="_blank" rel="noopener">0822-9931-3109</a>
+            <a class="val" href="https://wa.me/6282299313109" target="_blank" rel="noopener">Chat on WhatsApp &#8599;</a>
           </div>
           <div class="contact-item">
             <span class="label">LinkedIn</span>

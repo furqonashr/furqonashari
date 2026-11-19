@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Healthcare: half the budget, double the conversions · Furqon Ashari</title><meta name="description" content="Google Ads for a healthcare provider: conversions 6x and cost per conversion down 87%, with paid MQLs up 25% on less spend."><meta name="theme-color" content="#0a1322">
+<link rel="canonical" href="https://portfolio-furqon.vercel.app/healthcare.html"><link rel="icon" href="favicon.svg" type="image/svg+xml">
+<meta property="og:title" content="Healthcare: half the budget, double the conversions · Furqon Ashari"><meta property="og:description" content="Google Ads for a healthcare provider: conversions 6x and cost per conversion down 87%, with paid MQLs up 25% on less spend."><meta property="og:image" content="https://portfolio-furqon.vercel.app/og.png">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: single centered column (max 1120px), hero split text/portrait, one dark stat band, quiet sections below */
+:root{
+  color-scheme:dark;
+  --bg:#0a1322;
+  --surface:#111d31;
+  --ink:#eef2f7;
+  --muted:#9aa6b8;
+  --line:#22314a;
+  --accent:#c6f432;
+  --name:#c6f432;
+  --lime:#c6f432;--lav:#b4a7ff;--lav-soft:#221f3d;
+  --accent-soft:#1f2c14;
+  --band:#13213a;
+  --band-ink:#eef2f7;
+  --band-muted:#93a0b4;
+  --font-display:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-body:"Plus Jakarta Sans",ui-sans-serif,system-ui,-apple-system,"Segoe UI",sans-serif;
+  --font-mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,monospace;
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --bg:#0a1322;--surface:#111d31;--ink:#eef2f7;--muted:#9aa6b8;--line:#22314a;
+    --accent:#c6f432;--name:#c6f432;--lime:#c6f432;--lav:#b4a7ff;--lav-soft:#221f3d;--accent-soft:#1f2c14;--band:#13213a;--band-ink:#eef2f7;--band-muted:#93a0b4;
+    color-scheme:dark;
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#0a1322;--surface:#111d31;--ink:#eef2f7;--muted:#9aa6b8;--line:#22314a;
+  --accent:#c6f432;--name:#c6f432;--lime:#c6f432;--lav:#b4a7ff;--lav-soft:#221f3d;--accent-soft:#1f2c14;--band:#13213a;--band-ink:#eef2f7;--band-muted:#93a0b4;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion: reduce){html{scroll-behavior:auto}}
+body{background:var(--bg);color:var(--ink);font-family:var(--font-body);font-size:16px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:6px}
+.wrap{max-width:1120px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--font-display);text-wrap:balance;margin:0;line-height:1.1}
+p{margin:0}
+.label{font-family:var(--font-mono);font-size:12px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+
+/* nav */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:20;background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:30;background:var(--bg)}
+.top .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.brand{font-weight:800;letter-spacing:-.01em;text-decoration:none}
+.brand span{color:var(--accent)}
+.top nav{display:flex;gap:22px;flex-wrap:wrap}
+.top nav a{text-decoration:none;font-size:14px;color:var(--muted)}
+.top nav a:hover{color:var(--ink)}
+@media (max-width:720px){.top nav a:not(.cta){display:none}}
+.cta{color:var(--ink)!important;font-weight:600;border:1px solid var(--ink);padding:6px 14px;border-radius:999px}
+
+/* hero */
+.hero .wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;padding-block:64px 56px}
+.hero-text{min-width:0;display:flex;flex-direction:column;gap:22px}
+.hello{align-self:flex-start;border:1.5px solid var(--ink);border-radius:999px;padding:4px 16px;font-weight:600;font-size:15px}
+.hero h1{font-size:clamp(44px,7vw,84px);font-weight:800;letter-spacing:-.035em}
+.hero h1 em{font-style:normal;color:var(--name)}
+.role{font-family:var(--font-display);font-size:clamp(20px,2.6vw,28px);font-weight:600;letter-spacing:-.01em}
+.lede{font-size:18px;color:var(--muted);max-width:34em}
+.pills{display:flex;flex-wrap:wrap;gap:8px}
+.pill{display:inline-flex;align-items:center;gap:8px;background:var(--surface);color:var(--ink);border:1px solid var(--line);font-size:13.5px;font-weight:600;padding:6px 14px 6px 8px;border-radius:999px}
+.pill img{width:22px;height:22px;object-fit:contain;border-radius:6px;flex:none}
+.hero-photo{position:relative;min-width:0;max-width:440px;justify-self:center;width:100%}
+.hero-photo::before{content:"";position:absolute;left:8%;right:8%;bottom:0;aspect-ratio:1;border-radius:50%;background:var(--accent-soft)}
+.hero-photo img{position:relative;display:block;width:100%;aspect-ratio:4/5;object-fit:cover;object-position:center 18%;border-radius:28px 28px 220px 220px;filter:grayscale(.15)}
+.yrs{position:absolute;right:-8px;top:18px;background:var(--surface);border:1px solid var(--line);border-radius:16px;padding:12px 16px;text-align:left;box-shadow:0 8px 30px rgb(0 0 0 / .08)}
+.yrs b{display:block;font-family:var(--font-display);font-size:28px;line-height:1;letter-spacing:-.02em}
+.yrs span{font-size:12.5px;color:var(--muted)}
+@media (max-width:860px){
+  .hero .wrap{grid-template-columns:1fr;gap:36px;padding-block:40px}
+  .hero-photo{max-width:340px}
+  .yrs{right:0}
+}
+
+/* stat band */
+.band{background:var(--band);color:var(--band-ink)}
+.band .wrap{display:grid;grid-template-columns:repeat(5,1fr);padding-block:36px}
+.stat{padding:6px 20px;border-left:1px solid color-mix(in srgb,var(--band-ink) 18%,transparent);min-width:0}
+.stat:first-child{border-left:0;padding-left:0}
+.stat b{display:block;font-family:var(--font-display);font-size:clamp(28px,3.2vw,40px);font-weight:800;letter-spacing:-.03em;line-height:1.05;font-variant-numeric:tabular-nums}
+.stat span{display:block;margin-top:6px;font-size:13.5px;color:var(--band-muted);line-height:1.4}
+.stat .ind{margin:0 0 10px;font-family:var(--font-mono);font-size:11px;letter-spacing:.08em;text-transform:uppercase;color:var(--lime)}
+@media (max-width:900px){
+  .band .wrap{grid-template-columns:repeat(2,1fr);row-gap:24px}
+  .stat,.stat:first-child{border-left:0;padding-left:0}
+  .stat:last-child{grid-column:1/-1}
+}
+.ic{font-style:normal;display:grid;place-items:center;width:40px;height:40px;border-radius:12px;background:color-mix(in srgb,var(--lime) 16%,transparent);color:var(--lime);margin-bottom:14px;flex:none}
+.ic svg{width:22px;height:22px}
+.ic-sm{font-style:normal;display:grid;place-items:center;width:34px;height:34px;border-radius:10px;background:var(--accent-soft);color:var(--accent);margin-bottom:10px}
+.ic-sm svg{width:19px;height:19px}
+.card .ic-sm{margin-bottom:0}
+
+/* sections */
+section.block .wrap{padding-block:80px 0}
+.sec-head{display:flex;flex-direction:column;gap:10px;margin-bottom:36px}
+.sec-head h2{font-size:clamp(30px,4vw,44px);font-weight:800;letter-spacing:-.03em}
+.about-grid{display:grid;grid-template-columns:1fr 1.4fr;gap:48px}
+.about-grid p{font-size:18px;color:var(--muted)}
+.about-grid p strong{color:var(--ink);font-weight:600}
+.about-copy{display:flex;flex-direction:column;gap:18px;min-width:0;align-self:center}
+.about-side{min-width:0}
+.about-photo{display:block;width:100%;max-width:360px;aspect-ratio:4/5;object-fit:cover;object-position:center 20%;border-radius:24px;background:var(--accent-soft)}
+@media (max-width:760px){.about-grid{grid-template-columns:1fr;gap:12px}}
+
+/* case studies */
+.feature{background:var(--surface);border:1px solid var(--line);border-radius:24px;padding:36px;display:grid;grid-template-columns:1.05fr .95fr;gap:40px;margin-bottom:20px}
+.feature > *{min-width:0}
+.tagrow{display:flex;flex-wrap:wrap;gap:6px 14px;margin-bottom:14px}
+.feature h3{font-size:clamp(24px,2.8vw,32px);font-weight:800;letter-spacing:-.02em;margin-bottom:14px}
+.feature p.desc{color:var(--muted)}
+.approach{margin:22px 0 0;padding:0;list-style:none;display:flex;flex-direction:column;gap:10px}
+.approach li{display:grid;grid-template-columns:18px 1fr;gap:10px;font-size:15px}
+.approach li::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--accent);margin-top:8px}
+.results{display:grid;grid-template-columns:1fr 1fr;gap:22px 18px;margin-top:26px}
+.res{border-top:1px solid var(--line);padding-top:16px}
+.res b{display:block;font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-.02em;font-variant-numeric:tabular-nums}
+.res span{font-size:13px;color:var(--muted);line-height:1.4;display:block}
+.chart-card{display:flex;flex-direction:column;gap:12px}
+.chart-card .chart-box{flex:1;display:flex;flex-direction:column}
+.chart-card .chart-box svg{flex:1;margin-top:auto}
+.chart-box{background:var(--band);border-radius:18px;padding:18px 18px 12px}
+.chart-box .label{color:var(--band-muted)}
+.chart-top{display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:10px;margin-bottom:6px}
+.seg{display:inline-flex;background:color-mix(in srgb,var(--band-ink) 10%,transparent);border-radius:999px;padding:3px}
+.seg button{font:600 12.5px var(--font-body);color:var(--band-muted);background:transparent;border:0;border-radius:999px;padding:5px 12px;cursor:pointer}
+.seg button[aria-selected="true"]{background:var(--lime);color:#0f1b2d}
+.chart-box svg{display:block;width:100%;height:auto}
+.chart-box .t{fill:var(--band-muted);font-family:var(--font-mono);font-size:12px}
+.chart-box .v{fill:var(--band-ink);font-family:var(--font-display);font-size:15px;font-weight:800}
+.chart-box .bar{fill:color-mix(in srgb,var(--band-ink) 22%,transparent)}
+.chart-box .bar.hi{fill:var(--lime)}
+.chart-box .grid{stroke:color-mix(in srgb,var(--band-ink) 12%,transparent);stroke-width:1}
+.chart-note{font-size:12.5px;color:var(--muted)}
+.proof{grid-column:1/-1;border-top:1px solid var(--line);padding-top:24px;display:flex;flex-direction:column;gap:14px}
+.proof-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.proof figure{margin:0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.proof img{display:block;width:100%;height:auto;border-radius:12px;border:1px solid var(--line)}
+.proof figcaption{font-size:13px;color:var(--muted)}
+.proof figcaption b{color:var(--ink)}
+@media (max-width:860px){.feature{grid-template-columns:1fr;padding:24px;gap:28px}.proof-grid{grid-template-columns:1fr}}
+
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:26px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.card h3{font-size:20px;font-weight:700;letter-spacing:-.01em}
+.card p{color:var(--muted);font-size:15px}
+.card .big{margin-top:auto;padding-top:14px;border-top:1px solid var(--line);display:flex;gap:22px;flex-wrap:wrap}
+.card .big div b{display:block;font-family:var(--font-display);font-size:26px;font-weight:800;letter-spacing:-.02em}
+.card .big div span{font-size:12.5px;color:var(--muted)}
+@media (max-width:900px){.cards{grid-template-columns:1fr}}
+
+/* experience */
+.company{display:grid;grid-template-columns:240px 1fr;gap:32px;padding-block:32px;border-top:1px solid var(--line)}
+.company:last-child{border-bottom:1px solid var(--line)}
+.co-name h3{font-size:22px;font-weight:800;letter-spacing:-.01em}
+.co-name p{font-size:14px;color:var(--muted);margin-top:6px}
+.co-logo{display:block;height:56px;width:auto;max-width:210px;object-fit:contain;border-radius:14px;border:1px solid var(--line);background:#fff;margin-bottom:16px}
+.roles{display:flex;flex-direction:column;gap:28px;min-width:0}
+.role-item h4{margin:0;font-family:var(--font-display);font-size:18px;font-weight:700}
+.role-meta{font-family:var(--font-mono);font-size:12.5px;color:var(--muted);margin-top:4px}
+.role-item ul{margin:12px 0 0;padding-left:18px;display:flex;flex-direction:column;gap:6px;color:var(--muted);font-size:15px}
+.role-item ul li::marker{color:var(--accent)}
+.role-item ul li strong{color:var(--ink);font-weight:600}
+.now{display:inline-block;margin-left:8px;font-family:var(--font-mono);font-size:11px;letter-spacing:.06em;text-transform:uppercase;color:var(--accent);border:1px solid var(--accent);border-radius:999px;padding:1px 8px;vertical-align:middle}
+@media (max-width:760px){.company{grid-template-columns:1fr;gap:16px}}
+
+/* other work */
+.other{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+@media (max-width:900px){.other{grid-template-columns:1fr}}
+
+/* edu & skills */
+.two{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+@media (max-width:760px){.two{grid-template-columns:1fr}}
+.list{display:flex;flex-direction:column;gap:18px}
+.list div b{display:block;font-weight:700}
+.list div span{color:var(--muted);font-size:14.5px}
+.chips{display:flex;flex-wrap:wrap;gap:8px}
+.chip{border:1px solid var(--line);background:var(--bg);border-radius:999px;padding:6px 13px;font-size:13.5px}
+.tools{display:grid;grid-template-columns:110px 1fr;gap:10px 16px;font-size:14.5px}
+.tools dt{color:var(--muted);font-family:var(--font-mono);font-size:12px;text-transform:uppercase;letter-spacing:.06em;padding-top:3px}
+.tools dd{margin:0}
+
+/* contact */
+.contact .wrap{padding-block:96px 72px}
+.contact-box{background:var(--band);color:var(--band-ink);border-radius:28px;padding:56px 40px;display:flex;flex-direction:column;gap:28px}
+.contact-box h2{font-size:clamp(38px,6vw,72px);font-weight:800;letter-spacing:-.04em}
+.contact-box h2 em{font-style:normal;color:var(--lime)}
+.contact-row{display:flex;flex-wrap:wrap;gap:14px 40px;align-items:center}
+.contact-item{display:flex;flex-direction:column;gap:4px;min-width:0}
+.contact-item .label{color:var(--band-muted)}
+.contact-item .val{font-size:17px;font-weight:600;user-select:all;overflow-wrap:anywhere}
+.contact-item a.val{text-decoration:underline;text-underline-offset:4px;user-select:auto}
+.copy{background:transparent;color:var(--band-ink);border:1px solid color-mix(in srgb,var(--band-ink) 35%,transparent);border-radius:999px;padding:6px 14px;font:600 13px var(--font-body);cursor:pointer}
+.copy:hover{border-color:var(--band-ink)}
+@media (max-width:600px){.contact-box{padding:36px 22px}}
+footer .wrap{padding-block:0 40px;font-size:13px;color:var(--muted)}
+
+/* third accent: lavender */
+.stat b{color:var(--lime)}
+.stat:nth-child(n+3) b{color:var(--lav)}
+.stat .ind{color:var(--lav)}
+.stat:nth-child(n+3) .ic{background:color-mix(in srgb,var(--lav) 16%,transparent);color:var(--lav)}
+.res b{color:var(--lime)}
+.res:nth-child(even) b{color:var(--lav)}
+.res:nth-child(even) .ic-sm{background:var(--lav-soft);color:var(--lav)}
+.card .big div b{color:var(--lav)}
+.about-grid p strong{color:var(--lav)}
+.role-item ul li strong{color:var(--lav)}
+.role-item ul li::marker{color:var(--lav)}
+.approach li::before{background:var(--lav)}
+.proof figure:nth-child(1) figcaption b{color:var(--lav)}
+.proof figure:nth-child(2) figcaption b{color:var(--lime)}
+.chart-box .label{color:var(--lav)}
+.chart-box .bar{fill:color-mix(in srgb,var(--lav) 38%,transparent)}
+.chart-box .bar.hi{fill:var(--lime)}
+.chart-box .v{fill:var(--lav);paint-order:stroke;stroke:var(--band);stroke-width:4px;stroke-linejoin:round}
+.chart-box .v.hi{fill:var(--lime)}
+.chart-box .trend{fill:none;stroke:var(--lav);stroke-width:3;stroke-linecap:round;stroke-linejoin:round}
+.chart-box .dot{fill:var(--band);stroke:var(--lav);stroke-width:2.5}
+.chart-box .dot.hi{stroke:var(--lime);fill:var(--lime)}
+.chart-box .bar{transform-box:fill-box;transform-origin:50% 100%}
+.sec-head h2 em{font-style:normal;color:var(--lime)}
+
+/* ===== motion layer ===== */
+#prog{position:fixed;left:0;top:0;height:3px;width:100%;background:linear-gradient(90deg,var(--lav),var(--lime));transform:scaleX(0);transform-origin:0 50%;z-index:100;pointer-events:none}
+.top nav a:not(.cta){position:relative;transition:color .2s}
+.top nav a:not(.cta)::after{content:"";position:absolute;left:0;right:0;bottom:-6px;height:2px;border-radius:2px;background:var(--lime);transform:scaleX(0);transition:transform .25s}
+.top nav a.active:not(.cta){color:var(--ink)}
+.top nav a.active:not(.cta)::after{transform:scaleX(1)}
+.cta{display:inline-block;transition:transform .2s ease,background .2s,color .2s}
+.cta:hover{background:var(--lime);color:#0a1322!important;border-color:var(--lime)}
+.js .rv{opacity:0;transform:translateY(22px);transition:opacity .7s cubic-bezier(.2,.7,.2,1),transform .7s cubic-bezier(.2,.7,.2,1)}
+.js .rv.in{opacity:1;transform:none}
+.card,.pill,.res,.stat .ic{transition:transform .25s ease,border-color .25s,box-shadow .25s,background .25s}
+.card:hover{transform:translateY(-5px);border-color:color-mix(in srgb,var(--lav) 55%,var(--line));box-shadow:0 14px 34px rgb(0 0 0 / .28)}
+.pill:hover{transform:translateY(-2px);border-color:var(--lav);background:var(--lav-soft)}
+.stat:hover .ic{transform:rotate(-6deg) scale(1.08)}
+.js .hero .wrap>div:first-child>*{opacity:0;animation:up .7s cubic-bezier(.2,.7,.2,1) forwards}
+.js .hero .wrap>div:first-child>*:nth-child(2){animation-delay:.08s}
+.js .hero .wrap>div:first-child>*:nth-child(3){animation-delay:.16s}
+.js .hero .wrap>div:first-child>*:nth-child(4){animation-delay:.24s}
+.js .hero .wrap>div:first-child>*:nth-child(5){animation-delay:.32s}
+.js .hero .wrap>div:first-child>*:nth-child(6){animation-delay:.4s}
+.js .hero .wrap>div:first-child>*:nth-child(1){animation-delay:0s}
+.js .hero-photo{opacity:0;animation:pop .9s .15s cubic-bezier(.2,.7,.2,1) forwards}
+@keyframes up{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
+@keyframes pop{from{opacity:0;transform:scale(.96) translateY(14px)}to{opacity:1;transform:none}}
+.ltr{display:inline-block;opacity:0;transform:translateY(.5em);animation:up .6s cubic-bezier(.2,.7,.2,1) forwards}
+.yrs{animation:bob 5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-6px)}}
+/* chart tooltip */
+.chart-box{position:relative}
+.tip{position:absolute;pointer-events:none;background:#0a1322;border:1px solid var(--lav);border-radius:10px;padding:7px 11px;font-size:12.5px;line-height:1.35;color:var(--ink);opacity:0;transform:translate(-50%,0);transition:opacity .15s,left .12s;white-space:nowrap;z-index:5}
+.tip b{display:block;font-family:var(--font-display);font-size:16px;color:var(--lime)}
+.tip em{font-style:normal;color:var(--lav)}
+.tip.on{opacity:1}
+.chart-box .bar.hov{stroke:var(--lav);stroke-width:2}
+.chart-box svg{cursor:crosshair;touch-action:pan-y}
+/* before / after */
+.ba-wrap{display:flex;flex-direction:column;gap:8px}
+.ba{position:relative;border-radius:12px;overflow:hidden;border:1px solid var(--line);user-select:none;-webkit-user-select:none;touch-action:pan-y;cursor:ew-resize;background:#fff}
+.ba img{display:block;width:100%;height:auto;pointer-events:none}
+.ba .top-img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:left top;clip-path:inset(0 calc(100% - var(--p,50%)) 0 0)}
+.ba .bar-h{position:absolute;top:0;bottom:0;left:var(--p,50%);width:3px;margin-left:-1.5px;background:var(--lime);box-shadow:0 0 0 1px rgb(10 19 34 / .5)}
+.ba .knob{position:absolute;top:50%;left:var(--p,50%);width:38px;height:38px;margin:-19px 0 0 -19px;border-radius:50%;background:var(--lime);color:#0a1322;display:grid;place-items:center;font-weight:800;font-size:15px;box-shadow:0 4px 14px rgb(0 0 0 / .4)}
+.ba .tag{position:absolute;top:10px;padding:3px 10px;border-radius:999px;font-size:11.5px;font-weight:700;background:#0a1322;border:1px solid var(--line)}
+.ba .tag.b{left:10px;color:var(--lav)}
+.ba .tag.a{right:10px;color:var(--lime)}
+.ba:focus-visible{outline:2px solid var(--lime);outline-offset:3px}
+.ba-hint{font-size:12.5px;color:var(--muted)}
+.ba-hint b{color:var(--lime)}
+@media (prefers-reduced-motion:reduce){.yrs{animation:none}.card:hover,.pill:hover{transform:none}}
+</style>
+<style>
+.chero .wrap{padding-block:56px 40px;display:flex;flex-direction:column;gap:18px;max-width:1120px}
+.chero h1{font-size:clamp(36px,5.6vw,68px);font-weight:800;letter-spacing:-.035em;max-width:16em}
+.chero h1 em{font-style:normal;color:var(--lime)}
+.chero .lede{max-width:40em}
+.back{font-size:14px;color:var(--muted);text-decoration:none;align-self:flex-start}
+.back:hover{color:var(--ink)}
+.band.c4 .wrap{grid-template-columns:repeat(4,1fr)}
+@media(max-width:800px){.band.c4 .wrap{grid-template-columns:1fr 1fr;gap:18px 0}.band.c4 .stat:nth-child(3){border-left:0;padding-left:0}}
+.band.c4 .stat:nth-child(n+3) b{color:var(--lav)}
+.sec{padding-block:56px;border-top:1px solid var(--line)}
+.sec h2{font-size:clamp(26px,3.4vw,38px);font-weight:800;letter-spacing:-.03em;margin-bottom:22px}
+.sec h2 em{font-style:normal;color:var(--lime)}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:760px){.two{grid-template-columns:1fr}}
+.prose p{color:var(--muted);font-size:17px;margin-bottom:14px;max-width:42em}
+.prose p strong{color:var(--ink);font-weight:600}
+.steps{list-style:none;margin:0;padding:0;display:grid;gap:14px;counter-reset:s}
+.steps li{counter-increment:s;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 22px 20px 64px;position:relative;color:var(--muted);font-size:15.5px}
+.steps li::before{content:counter(s);position:absolute;left:20px;top:18px;width:28px;height:28px;border-radius:50%;background:var(--lav-soft);color:var(--lav);font:700 14px var(--font-display);display:grid;place-items:center}
+.steps li b{display:block;color:var(--ink);font-size:17px;margin-bottom:2px}
+.charts{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px}
+.chart{background:var(--surface);border:1px solid var(--line);border-radius:20px;padding:20px 20px 14px}
+.chart h3{font-size:15px;font-weight:700;margin-bottom:2px}
+.chart p{font-size:12.5px;color:var(--muted);margin-bottom:10px}
+.chart svg{width:100%;height:auto;display:block}
+.chart text{font-family:var(--font-mono);font-size:11px;fill:var(--muted)}
+.chart .v{fill:var(--ink);font-weight:500}
+.note{border:1px dashed var(--line);border-radius:16px;padding:18px 22px;color:var(--muted);font-size:14.5px;margin-top:26px}
+.note b{color:var(--ink)}
+.tl{display:grid;grid-template-columns:repeat(4,1fr);gap:14px;margin-top:6px}
+@media(max-width:800px){.tl{grid-template-columns:1fr 1fr}}
+.tl div{border-top:2px solid var(--lav);padding-top:12px}
+.tl b{display:block;font-family:var(--font-mono);font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--lav);margin-bottom:4px}
+.tl span{font-size:14.5px;color:var(--muted)}
+.next{display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:18px}
+.next a{display:block;text-decoration:none;background:var(--surface);border:1px solid var(--line);border-radius:18px;padding:20px 22px;transition:transform .25s,border-color .25s}
+.next a:hover{transform:translateY(-4px);border-color:var(--lav)}
+.next a b{display:block;font-size:18px;margin-top:4px}
+.shots{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-top:8px}@media(max-width:700px){.shots{grid-template-columns:1fr}}.shots figure{margin:0}.shots img{width:100%;height:auto;border-radius:14px;border:1px solid var(--line);display:block}.shots figcaption{font-size:13px;color:var(--muted);margin-top:8px}.shots figcaption b{color:var(--ink)}
+
+.btn{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:15px;padding:12px 22px;border-radius:999px;text-decoration:none;transition:transform .2s,background .2s,border-color .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn.pri{background:var(--lime);color:#0a1322}
+.btn.sec{border:1px solid var(--ink);color:var(--ink)}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin:6px 0 4px}
+.chart rect.bar{transform-box:fill-box;transform-origin:50% 100%;transition:opacity .2s}
+.js .chart rect.bar{transform:scaleY(0)}
+.chart .trend{fill:none;stroke:#b4a7ff;stroke-width:2.5;stroke-linecap:round;stroke-linejoin:round;pointer-events:none}
+.chart .dot{fill:#0f1b2e;stroke:#b4a7ff;stroke-width:2;pointer-events:none}
+.chart rect.bar{cursor:pointer;outline:none}
+.chart:has(rect.bar:hover) rect.bar:not(:hover){opacity:.4}
+.chart rect.bar:focus{stroke:#fff;stroke-width:2}
+#tip{position:fixed;z-index:200;max-width:260px;background:var(--bg);color:var(--ink);border:1px solid var(--lav);border-radius:10px;padding:8px 12px;font-size:13px;line-height:1.4;pointer-events:none;opacity:0;transform:translateY(4px);transition:opacity .15s,transform .15s;box-shadow:0 10px 28px rgb(0 0 0 / .45)}
+#tip.on{opacity:1;transform:none}
+.stat{cursor:default}
+.shotpanel[hidden]{display:none}
+.segwrap{display:flex;flex-wrap:wrap;gap:12px;align-items:center;margin-bottom:14px}
+.more{color:var(--lime);font-weight:600;text-decoration:none;font-size:14.5px}
+</style>
+</head><body><div id="prog" aria-hidden="true"></div><header class="top"><div class="wrap"><a class="brand" href="index.html">Furqon<span>.</span></a><nav aria-label="Sections"><a href="index.html#work">All work</a><a href="index.html#experience">Experience</a><a class="cta" href="index.html#contact">Let's talk</a></nav></div></header>
+<main>
+<section class="chero"><div class="wrap"><a class="back" href="index.html#work">&larr; All case studies</a>
+<div class="tagrow" style="margin:0"><span class="label">Healthcare</span><span class="label">Google Ads</span></div>
+<h1>Half the budget, <em>double</em> the conversions</h1><p class="lede">Google Ads for a healthcare provider whose patients inquire over WhatsApp. Judged on qualified leads and bookings, not clicks.</p></div></section>
+<section class="band c4" aria-label="Highlights"><div class="wrap"><div class="stat rv"><div class="ind">Efficiency</div><b>&minus;87%</b><span>cost per conversion, Jul to Oct</span></div><div class="stat rv"><div class="ind">Volume</div><b>6x</b><span>conversions on 20% less spend, Jul to Oct</span></div><div class="stat rv"><div class="ind">Quality</div><b>+25%</b><span>paid MQLs per 2 weeks, on 3% less Google spend</span></div><div class="stat rv"><div class="ind">Quality</div><b>36&rarr;50%</b><span>Google raw leads that became MQLs</span></div></div></section>
+<div class="wrap">
+<section class="sec"><h2>The <em>challenge</em></h2><div class="prose">
+<p>A healthcare provider whose patients start the conversation on WhatsApp. Google Ads was spread over dozens of campaigns, many of them spending without producing a single inquiry, and a click or a chat is not yet a patient.</p>
+<p>The goal was to <strong>turn Google spend into qualified leads (MQL) and booked consultations</strong>, not just into clicks, while the client cut the budget partway through.</p></div></section>
+
+<section class="sec"><h2>What <em>moved</em></h2>
+<div class="charts">
+<div class="chart rv"><h3>Conversions</h3><p>Search campaigns, Jul = 1x</p><svg viewBox="0 0 300 170" role="img" aria-label="Conversions: Jul 1.0x, Aug 3.1x, Sep 3.1x, Oct 6.2x"><line x1="16" x2="284" y1="144" y2="144" stroke="#22314a"/><rect class="bar" tabindex="0" data-tip="Jul: baseline (1.0x)" style="--d:0.00s" x="34.2" y="126.6" width="39.7" height="17.4" rx="4" fill="#c6f432"/><text class="v" x="54.0" y="121.6" text-anchor="middle">1.0x</text><text x="54.0" y="162" text-anchor="middle">Jul</text><rect class="bar" tabindex="0" data-tip="Aug: 3.1x July, with the budget at its peak" style="--d:0.07s" x="98.2" y="90.0" width="39.7" height="54.0" rx="4" fill="#c6f432"/><text class="v" x="118.0" y="85.0" text-anchor="middle">3.1x</text><text x="118.0" y="162" text-anchor="middle">Aug</text><rect class="bar" tabindex="0" data-tip="Sep: 3.1x July on 53% less spend than August" style="--d:0.14s" x="162.2" y="90.0" width="39.7" height="54.0" rx="4" fill="#c6f432"/><text class="v" x="182.0" y="85.0" text-anchor="middle">3.1x</text><text x="182.0" y="162" text-anchor="middle">Sep</text><rect class="bar" tabindex="0" data-tip="Oct: 6.2x July at the same spend as September" style="--d:0.21s" x="226.2" y="35.9" width="39.7" height="108.1" rx="4" fill="#b4a7ff"/><text class="v" x="246.0" y="30.9" text-anchor="middle">6.2x</text><text x="246.0" y="162" text-anchor="middle">Oct</text></svg></div>
+<div class="chart rv"><h3>Cost per conversion</h3><p>Search campaigns, Jul = 100</p><svg viewBox="0 0 300 170" role="img" aria-label="Cost per conversion: Jul 100, Aug 55, Sep 26, Oct 13"><line x1="16" x2="284" y1="144" y2="144" stroke="#22314a"/><rect class="bar" tabindex="0" data-tip="Jul: baseline (index 100)" style="--d:0.00s" x="34.2" y="37.9" width="39.7" height="106.1" rx="4" fill="#c6f432"/><text class="v" x="54.0" y="32.9" text-anchor="middle">100</text><text x="54.0" y="162" text-anchor="middle">Jul</text><rect class="bar" tabindex="0" data-tip="Aug: 45% cheaper than July" style="--d:0.07s" x="98.2" y="85.7" width="39.7" height="58.3" rx="4" fill="#c6f432"/><text class="v" x="118.0" y="80.7" text-anchor="middle">55</text><text x="118.0" y="162" text-anchor="middle">Aug</text><rect class="bar" tabindex="0" data-tip="Sep: 74% cheaper than July" style="--d:0.14s" x="162.2" y="116.4" width="39.7" height="27.6" rx="4" fill="#c6f432"/><text class="v" x="182.0" y="111.4" text-anchor="middle">26</text><text x="182.0" y="162" text-anchor="middle">Sep</text><rect class="bar" tabindex="0" data-tip="Oct: 87% cheaper than July" style="--d:0.21s" x="226.2" y="130.2" width="39.7" height="13.8" rx="4" fill="#b4a7ff"/><text class="v" x="246.0" y="125.2" text-anchor="middle">13</text><text x="246.0" y="162" text-anchor="middle">Oct</text></svg></div>
+<div class="chart rv"><h3>Ad spend</h3><p>Search campaigns, Jul = 100</p><svg viewBox="0 0 300 170" role="img" aria-label="Ad spend: Jul 100, Aug 172, Sep 81, Oct 80"><line x1="16" x2="284" y1="144" y2="144" stroke="#22314a"/><rect class="bar" tabindex="0" data-tip="Jul: baseline (index 100)" style="--d:0.00s" x="34.2" y="79.8" width="39.7" height="64.2" rx="4" fill="#c6f432"/><text class="v" x="54.0" y="74.8" text-anchor="middle">100</text><text x="54.0" y="162" text-anchor="middle">Jul</text><rect class="bar" tabindex="0" data-tip="Aug: 72% above July, the peak" style="--d:0.07s" x="98.2" y="33.6" width="39.7" height="110.4" rx="4" fill="#c6f432"/><text class="v" x="118.0" y="28.6" text-anchor="middle">172</text><text x="118.0" y="162" text-anchor="middle">Aug</text><rect class="bar" tabindex="0" data-tip="Sep: the client halved the budget (53% below August)" style="--d:0.14s" x="162.2" y="92.0" width="39.7" height="52.0" rx="4" fill="#c6f432"/><text class="v" x="182.0" y="87.0" text-anchor="middle">81</text><text x="182.0" y="162" text-anchor="middle">Sep</text><rect class="bar" tabindex="0" data-tip="Oct: 1% below September" style="--d:0.21s" x="226.2" y="92.6" width="39.7" height="51.4" rx="4" fill="#c6f432"/><text class="v" x="246.0" y="87.6" text-anchor="middle">80</text><text x="246.0" y="162" text-anchor="middle">Oct</text></svg></div>
+</div>
+<div class="note"><b>Reading the charts.</b> Conversions here are WhatsApp clicks and form submissions, as counted in Google Ads. Spend peaked in August, then the client halved the budget in September: conversions held (&minus;2%) on 53% less spend, and in October they doubled at the same spend (+102%).</div></section>
+
+<section class="sec"><h2>Beyond clicks: <em>qualified leads</em></h2>
+<div class="two">
+<div class="prose"><p>Google conversions overcount real patients, so I judged the work against the CRM. Over the last two 2-week blocks, <strong>paid MQLs rose from 16 to 20 (+25%)</strong> while Google spend fell 3%, and <strong>cost per MQL dropped 24%</strong>.</p>
+<p>Of the raw leads Google brought in, <strong>36% became MQLs, up to 50%</strong> (16 of 44, then 20 of 40).</p></div>
+<div class="prose"><p>Further down the funnel, the share of leads that reached a booked consultation <strong>doubled from 4.8% to a peak of 9.8%</strong> (2-week blocks, all inbound leads), when budget moved to the themes patients actually booked from.</p></div></div>
+<div class="note"><b>Read with care.</b> The block after the peak was 5.4%, and the latest block is still maturing, so I treat 9.8% as what the funnel can do, not as the steady state. MQL counts are small (single and double digits per week).</div></section>
+
+<section class="sec"><h2>How I <em>optimize</em></h2>
+<ol class="steps">
+<li><b>Audit campaign by campaign</b>Every campaign graded on conversions and on the leads that came out of it in the CRM, not on click metrics.</li>
+<li><b>Cut what produced nothing</b>Seven campaigns with zero conversions were spending about 15% of the Google budget. Paused and the money redistributed.</li>
+<li><b>Concentrate on what qualifies</b>Budget moved to the treatment themes and the hospital-search terms that gave the most MQLs at the lowest cost.</li>
+<li><b>Cross-check against the CRM</b>Because a WhatsApp click is not a patient, I compare Google conversions with CRM leads every cycle and optimise toward MQL, so volume doesn't hide quality.</li>
+</ol></section>
+<section class="sec"><h2>More <em>case studies</em></h2><div class="next"><a href="fitpac.html"><span class="label">Baby care</span><b>ROAS 2x on Meta, +60% on Shopee</b></a><a href="marketing-industry.html"><span class="label">Marketing industry</span><b>87 inquiries to 5 deals in five weeks</b></a><a href="dental.html"><span class="label">Dental clinics</span><b>Back from 11 weeks offline</b></a></div></section></div>
+<section class="contact" id="contact"><div class="wrap"><div class="contact-box"><span class="label" style="color:var(--band-muted)">Contact</span><h2>Let's work <em>together.</em></h2><div class="contact-row"><div class="contact-item"><span class="label">WhatsApp</span><a class="val" href="https://wa.me/6282299313109" target="_blank" rel="noopener">Chat on WhatsApp &#8599;</a></div><div class="contact-item"><span class="label">LinkedIn</span><a class="val" href="https://www.linkedin.com/in/furqonashari/" target="_blank" rel="noopener">Furqon Ashari</a></div><div class="contact-item"><span class="label">Email</span><a class="val" href="mailto:furqonkumambouw@gmail.com">furqonkumambouw@gmail.com</a></div><a class="btn pri" href="https://s.id/PortfolioFurqonAshari" target="_blank" rel="noopener">Download CV</a></div></div></div></section>
+</main>
+<footer><div class="wrap">© 2026 Furqon Ashari · Jakarta, Indonesia</div></footer>
+<script>
+(function(){try{history.scrollRestoration="manual"}catch(e){}if(!location.hash){document.documentElement.style.scrollBehavior="auto";scrollTo(0,0);addEventListener("pageshow",function(){if(!location.hash)scrollTo(0,0)})}var r=window.matchMedia&&matchMedia("(prefers-reduced-motion: reduce)").matches,d=document.documentElement;if(!r)d.classList.add("js");
+var p=document.getElementById("prog");function sc(){var h=d.scrollHeight-innerHeight;p.style.transform="scaleX("+(h>0?Math.min(1,scrollY/h):0)+")"}addEventListener("scroll",sc,{passive:true});sc();
+function count(el){if(r)return;var txt=el.textContent;if(!/\d/.test(txt))return;var t0=null;function f(ts){if(!t0)t0=ts;var k=Math.min(1,(ts-t0)/1100),e=1-Math.pow(1-k,3);el.textContent=txt.replace(/\d+(?:\.\d+)?/g,function(m){var dec=(m.split(".")[1]||"").length;return (parseFloat(m)*e).toFixed(dec)});if(k<1)requestAnimationFrame(f);else el.textContent=txt}requestAnimationFrame(f)}
+var els=[].slice.call(document.querySelectorAll(".rv"));
+if(r||!("IntersectionObserver" in window)){els.forEach(function(e){e.classList.add("in")})}
+else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("in");if(e.target.classList.contains("stat")){var b=e.target.querySelector("b");if(b)count(b)}io.unobserve(e.target)}})},{threshold:.15});els.forEach(function(e){io.observe(e)})}
+var tip=document.createElement("div");tip.id="tip";tip.setAttribute("role","tooltip");document.body.appendChild(tip);
+function show(el){var t=el.getAttribute("data-tip");if(!t)return;tip.textContent=t;tip.classList.add("on");var b=el.getBoundingClientRect(),w=tip.offsetWidth,h=tip.offsetHeight;var x=Math.max(8,Math.min(innerWidth-w-8,b.left+b.width/2-w/2));var y=b.top-h-10;if(y<8)y=b.bottom+10;tip.style.left=x+"px";tip.style.top=y+"px"}
+function hide(){tip.classList.remove("on")}
+[].forEach.call(document.querySelectorAll("rect.bar"),function(el){el.addEventListener("mouseenter",function(){show(el)});el.addEventListener("mouseleave",hide);el.addEventListener("focus",function(){show(el)});el.addEventListener("blur",hide);el.addEventListener("click",function(){show(el)})});
+addEventListener("scroll",hide,{passive:true});
+(function(){var ns="http://www.w3.org/2000/svg";function cl(x){return x<0?0:x>1?1:x}
+var cs=[].slice.call(document.querySelectorAll(".chart")).map(function(c){var svg=c.querySelector("svg"),bars=[].slice.call(c.querySelectorAll("rect.bar"));if(!bars.length)return null;
+var vs=[].slice.call(c.querySelectorAll("text.v")),pts=bars.map(function(b){return{x:+b.getAttribute("x")+ +b.getAttribute("width")/2,y:+b.getAttribute("y")}});
+var line=null,dots=[];if(pts.length>1){line=document.createElementNS(ns,"path");line.setAttribute("d",pts.map(function(p,i){return(i?"L":"M")+p.x.toFixed(1)+" "+p.y.toFixed(1)}).join(" "));line.setAttribute("class","trend");line.setAttribute("pathLength","1");svg.appendChild(line);line.style.strokeDasharray="1"}
+pts.forEach(function(p){var d=document.createElementNS(ns,"circle");d.setAttribute("cx",p.x);d.setAttribute("cy",p.y);d.setAttribute("r",3.5);d.setAttribute("class","dot");svg.appendChild(d);dots.push(d)});
+return{c:c,bars:bars,vs:vs,line:line,dots:dots}}).filter(Boolean);
+function upd(){cs.forEach(function(o){var rc=o.c.getBoundingClientRect(),vh=innerHeight||800,st=vh*.9,en=Math.max(vh*.55-rc.height/2,vh*.08),q=r?1:cl((st-rc.top)/(st-en)),n=o.bars.length,lead=.25,f=q*(1+lead)-lead;
+if(o.line){o.line.style.strokeDashoffset=String(1-cl(f));o.line.style.opacity=f>0?1:0}
+o.bars.forEach(function(b,i){var k=n>1?i/(n-1):0,s=cl((f-k+lead)/lead),sh=cl((f-k+.06)/.06);b.style.transform="scaleY("+s+")";if(o.vs[i])o.vs[i].style.opacity=sh;o.dots[i].style.opacity=sh})})}
+var tk=false;function on(){if(tk)return;tk=true;requestAnimationFrame(function(){tk=false;upd()})}
+addEventListener("scroll",on,{passive:true});addEventListener("resize",on);upd()})();
+
+[].forEach.call(document.querySelectorAll(".seg[data-tabs]"),function(sg){var btns=[].slice.call(sg.querySelectorAll("button"));btns.forEach(function(b){b.addEventListener("click",function(){btns.forEach(function(x){x.setAttribute("aria-selected",x===b?"true":"false")});[].forEach.call(document.querySelectorAll(".shotpanel"),function(pn){pn.hidden=pn.getAttribute("data-k")!==b.getAttribute("data-k")})})})});
+})();
+</script></body></html>
