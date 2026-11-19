@@ -1,0 +1,6 @@
+{
+  "redirects": [
+    { "source": "/fitpac.html", "destination": "/babycare.html", "permanent": true },
+    { "source": "/fitpac", "destination": "/babycare.html", "permanent": true }
+  ]
+}
